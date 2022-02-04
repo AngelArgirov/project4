@@ -6,7 +6,7 @@ tasks:
    - init: pip install Django
    - init: pip install Pillow
    - init: pip3 install django-allauth
-   - init: python manage.py runserver
+   
 vscode:
   extensions:
     - ms-python.python
