@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-CSRF_TRUSTED_ORIGINS = ["https://8000-angelargirov-project4-9zvv15iipos.ws-eu30.gitpod.io"]
+CSRF_TRUSTED_ORIGINS = ["https://8000-angelargirov-project4-h7ue8vthzgk.ws-eu30.gitpod.io"]
 
 AUTHENTICATION_BACKENDS = [
     
@@ -38,6 +38,7 @@ AUTHENTICATION_BACKENDS = [
     'allauth.account.auth_backends.AuthenticationBackend',
     
 ]
+
 
 
 # Application definition
@@ -54,6 +55,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    
 ]
 
 MIDDLEWARE = [
@@ -82,6 +84,8 @@ TEMPLATES = [
         },
     },
 ]
+
+
 SITE_ID = 1
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
