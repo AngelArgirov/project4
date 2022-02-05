@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-CSRF_TRUSTED_ORIGINS = ["https://8000-angelargirov-project4-huqoqg1s9ja.ws-eu30.gitpod.io"]
+CSRF_TRUSTED_ORIGINS = ["https://8000-angelargirov-project4-ytq5dam50az.ws-eu30.gitpod.io"]
 
 AUTHENTICATION_BACKENDS = [
     
@@ -72,7 +72,10 @@ ROOT_URLCONF = 'ecommerce.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            os.path.join(BASE_DIR, 'templates'),
+            os.path.join(BASE_DIR, 'templates', 'allauth'),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
