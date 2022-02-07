@@ -4,6 +4,8 @@ import json
 import datetime
 from .models import * 
 
+
+
 def store(request):
 
 	if request.user.is_authenticated:
