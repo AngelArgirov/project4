@@ -87,7 +87,7 @@
 
             </ul>
             <div class="form-inline my-2 my-lg-0">
-                <a href="{% url 'account_logout' %}" class=' btn btn-danger'>Sign Out</a>
+                <a href="{% url 'logout' %}" class=' btn btn-danger'>Sign Out</a>
 
                 <a href=" {% url 'cart' %}">
                     <img id="cart-icon" src="{% static 'images/6+cart.png' %}">
@@ -111,9 +111,9 @@
 
     <div class="hero" id="home">
         <div class="hero__container">
-            <h1 class="hero__heading">ARE YOU LOOKING FOR <span>GAMING PRODUCTS</span></h1>
+            <h1 class="hero__heading">WELCOME TO THE <span>GAMING WORLD</span></h1>
             <div class=" my-2 my-lg-0">
-                <a href="{% url 'login' %}" class=' btn btn-primary btn-lg'>Sign In</a>
+                <a href="{% url 'login' %}" class=' btn btn-primary btn-lg'>Log In</a>
                 <a href="{% url 'register' %}" class=' btn btn-danger btn-lg'>Register</a>
             </div>
         </div>

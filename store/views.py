@@ -49,7 +49,7 @@ def loginPage(request):
 
 def logoutUser(request):
 	logout(request)
-	return redirect('main')
+	return redirect('login')
 
 
 def store(request):
