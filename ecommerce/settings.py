@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 import os
 from pathlib import Path
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -27,7 +28,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-CSRF_TRUSTED_ORIGINS = ["https://8000-angelargirov-project4-9k8riw2m22x.ws-eu30.gitpod.io"]
+CSRF_TRUSTED_ORIGINS = ["https://8000-angelargirov-project4-lbn0x1ytr0n.ws-eu31.gitpod.io"]
 
 AUTHENTICATION_BACKENDS = [
     
@@ -115,9 +116,10 @@ WSGI_APPLICATION = 'ecommerce.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+       'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
 
 
 # Password validation
