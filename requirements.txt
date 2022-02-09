@@ -28,3 +28,4 @@ requests-unixsocket==0.2.0
 six==1.14.0
 sqlparse==0.4.2
 urllib3==1.25.8
+setuptools==0.7.3
