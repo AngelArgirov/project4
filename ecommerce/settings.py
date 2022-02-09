@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-CSRF_TRUSTED_ORIGINS = ["https://8000-angelargirov-project4-3vxppnjh0fg.ws-eu30.gitpod.io"]
+CSRF_TRUSTED_ORIGINS = ["https://8000-angelargirov-project4-9k8riw2m22x.ws-eu30.gitpod.io"]
 
 AUTHENTICATION_BACKENDS = [
     
