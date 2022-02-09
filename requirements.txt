@@ -8,6 +8,8 @@ configobj==5.0.6
 cryptography==36.0.1
 dbus-python==1.2.16
 defusedxml==0.7.1
+distribute==0.6.24
+dj-database-url==0.5.0
 Django==4.0.2
 django-allauth==0.48.0
 dulwich==0.19.15
@@ -16,6 +18,7 @@ gunicorn==20.1.0
 idna==2.8
 oauthlib==3.2.0
 Pillow==9.0.1
+psycopg2-binary==2.9.3
 pycparser==2.21
 PyGObject==3.36.0
 PyJWT==2.3.0
@@ -28,4 +31,3 @@ requests-unixsocket==0.2.0
 six==1.14.0
 sqlparse==0.4.2
 urllib3==1.25.8
-setuptools==0.7.3
