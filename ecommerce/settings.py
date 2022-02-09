@@ -26,20 +26,20 @@ SECRET_KEY = 'django-insecure-nh69yw+mnn$-d_=06fq*r3$s8x15&x^tg3jx8(^f-@lq6a6!5(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [django-gaming.herokuapp.com', 'localhost']
 
-CSRF_TRUSTED_ORIGINS = ["https://8000-angelargirov-project4-lbn0x1ytr0n.ws-eu31.gitpod.io"]
+CSRF_TRUSTED_ORIGINS = [
+    "https://8000-angelargirov-project4-lbn0x1ytr0n.ws-eu31.gitpod.io"]
 
 AUTHENTICATION_BACKENDS = [
-    
+
     # Needed to login by username in Django admin, regardless of `allauth`
     'django.contrib.auth.backends.ModelBackend',
 
     # `allauth` specific authentication methods, such as login by e-mail
     'allauth.account.auth_backends.AuthenticationBackend',
-    
-]
 
+]
 
 
 # Application definition
@@ -57,7 +57,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'chat'
-    
+
 ]
 
 MIDDLEWARE = [
@@ -113,13 +113,17 @@ WSGI_APPLICATION = 'ecommerce.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-       'NAME': BASE_DIR / 'db.sqlite3',
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
-}
-
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
 
 
 # Password validation
