@@ -44,6 +44,13 @@ h6 {
     margin-left: 15px;
 }
 
+.nav-link {
+
+    display: inline-block;
+    color: white;
+}
+
+
 #cart-total {
     display: block;
     text-align: center;

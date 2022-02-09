@@ -3,8 +3,21 @@ from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 from django.db.models.signals import post_save
 from django.dispatch import receiver
+from datetime import datetime
+from datetime import datetime
 
 # Create your models here.
+class Room(models.Model):
+    name = models.CharField(max_length=1000)
+class Message(models.Model):
+    value = models.CharField(max_length=1000000)
+    date = models.DateTimeField(default=datetime.now, blank=True)
+    user = models.CharField(max_length=1000000)
+    room = models.CharField(max_length=1000000)
+# Create your models here.
+
+
+
 class CreateUserForm(UserCreationForm):
 	class Meta:
 		model = User
